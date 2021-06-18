@@ -4,8 +4,14 @@ from bs4 import BeautifulSoup
 import re
 
 # Specify url of the web page
-urlmain = input("Enter the url to be checked: ")
-source = urlopen(urlmain).read()
+# topic = []
+topic = input("Enter the topic to be searched in Wikipedia: ")
+# topic.append(name)
+# Configuring the word for wikipedia url
+# for ele in topic:
+#     # adding each string after replacement using replace()
+#     topic.append(ele.replace(" ", "_"))
+source = urlopen("https://en.wikipedia.org/wiki/" + topic).read()
 
 # Make a soup
 soup = BeautifulSoup(source, 'lxml')
