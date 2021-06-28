@@ -12,3 +12,4 @@ for image in images:
     imagelist.append(image['src'])
     print(image['src'] + '\n')
 print(filenamelist)
+# Test
